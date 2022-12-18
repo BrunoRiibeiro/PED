@@ -1,5 +1,6 @@
 *.html linguist-detectable=false
 *.js linguist-detectable=false
 *.tcl linguist-detectable=false
+*.tk linguist-detectable=false
 *.sh linguist-detectable=false
 
