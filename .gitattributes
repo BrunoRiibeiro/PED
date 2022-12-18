@@ -5,3 +5,4 @@
 *.bat linguist-detectable=false
 *.lpr linguist-detectable=false
 *.pb linguist-detectable=false
+*.tcl linguist-detectable=false
