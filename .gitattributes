@@ -6,3 +6,4 @@
 *.bat linguist-detectable=false
 *.c linguist-detectable=false
 *.lpr linguist-detectable=false
+*.pb linguist-detectable=false
