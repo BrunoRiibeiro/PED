@@ -1,3 +1,4 @@
+*.vdh linguist-detectable=true
 *.html linguist-detectable=false
 *.js linguist-detectable=false
 *.c linguist-detectable=false
