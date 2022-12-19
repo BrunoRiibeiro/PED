@@ -1,6 +1,6 @@
 ----------------------------------------------------------------------------------
 -- Create Date: 18.12.2022
--- Design Name: Bruno Ribeiro, Bruno Martins e Natalia Regis
+-- Design Name: Bruno Ribeiro
 -- Module Name: exp_1 - Behavioral
 -- Project Name: exp_1
 ----------------------------------------------------------------------------------
