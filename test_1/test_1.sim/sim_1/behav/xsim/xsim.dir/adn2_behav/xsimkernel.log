@@ -1,7 +1,0 @@
-Running: xsim.dir/adn2_behav/xsimk -simmode gui -wdb adn2_behav.wdb -simrunnum 0 -socket 36847
-Design successfully loaded
-Design Loading Memory Usage: 32776 KB (Peak: 33344 KB)
-Design Loading CPU Usage: 20 ms
-Simulation completed
-Simulation Memory Usage: 115500 KB (Peak: 180048 KB)
-Simulation CPU Usage: 50 ms
