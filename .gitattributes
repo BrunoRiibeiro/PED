@@ -7,3 +7,4 @@
 *.lpr linguist-detectable=false
 *.pb linguist-detectable=false
 exp_2/exp_2.runs/** linguist-detectable=false
+exp_2/exp_2.sim/** linguist-detectable=false
