@@ -2,3 +2,6 @@ Running: xsim.dir/exp_2_tb_behav/xsimk -simmode gui -wdb exp_2_tb_behav.wdb -sim
 Design successfully loaded
 Design Loading Memory Usage: 32780 KB (Peak: 33348 KB)
 Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 114516 KB (Peak: 180052 KB)
+Simulation CPU Usage: 40 ms
