@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../somador4bits.srcs/sources_1/new/soma1.vhd" \
+"../../../../somador4bits.srcs/sources_1/new/soma4.vhd" \
+"../../../../somador4bits.srcs/sim_1/new/tb_soma4.vhd" \
+
+# Do not sort compile order
+nosort

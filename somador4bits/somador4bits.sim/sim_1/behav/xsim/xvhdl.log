@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/henri/PED/somador4bits/somador4bits.srcs/sources_1/new/soma1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'soma1'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/henri/PED/somador4bits/somador4bits.srcs/sources_1/new/soma4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'soma4'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/henri/PED/somador4bits/somador4bits.srcs/sim_1/new/tb_soma4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_soma4'
