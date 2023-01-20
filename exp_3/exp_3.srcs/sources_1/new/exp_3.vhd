@@ -7,31 +7,42 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity exp_3 is
-    Port ( a, b : in STD_LOGIC_VECTOR(4 downto 0);
-           s    : in STD_LOGIC_VECTOR(1 downto 0);
-           f    : out STD_LOGIC_VECTOR(4 downto 0);
-           over : out STD_LOGIC);
+    Port ( A, B        : in  std_logic_vector(3 downto 0);
+           S           : in  std_logic_vector(1 downto 0);
+           F           : out std_logic_vector(3 downto 0);
+           over, c_out : out std_logic);
 end exp_3;
 
 architecture Behavioral of exp_3 is
-    signal sf: STD_LOGIC_VECTOR(4 downto 0);
 begin
-    process(a, b, s)
+    process(A, B, S)
+    variable temp : std_logic_vector(4 downto 0);
     begin
-        case s is
+        case S is
             when "00" =>
-                sf <= a + b;
-                over <= (not a(4) and not b(4) and sf(4)) or (a(4) and b(4) and not sf(4));
-                f <= sf;
+                temp := std_logic_vector(signed(A) + signed(B));
+                F <= temp(3 downto 0);
+                over <= temp(4);
+                c_out <= temp(3);
             when "01" =>
-                sf <= a - b;
-                over <= (not a(4) and not b(4) and sf(4)) or (a(4) and b(4) and not sf(4));
-                f <= sf;
-            when "10" => f <= a and b;
-            when "11" => f <= a or b;
+                temp := std_logic_vector(signed(A) - signed(B));
+                F <= temp(3 downto 0);
+                over <= temp(4);
+                c_out <= temp(3);
+            when "10" =>
+                F <= A and B;
+                over <= '0';
+                c_out <= '0';
+            when "11" =>
+                F <= A or B;
+                over <= '0';
+                c_out <= '0';
+            when others =>
+                F <= (others => 'X');
+                over <= 'X';
+                c_out <= 'X';
         end case;
     end process;
 end Behavioral;

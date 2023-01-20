@@ -1,0 +1,33 @@
+
+*** Running vivado
+    with args -log exp_3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp_3.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source exp_3.tcl -notrace
+Command: synth_design -top exp_3 -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 4801 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1348.746 ; gain = 68.023 ; free physical = 173 ; free virtual = 6672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'exp_3' [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:18]
+INFO: [Synth 8-226] default block is never used [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:23]
+ERROR: [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:25]
+ERROR: [Synth 8-285] failed synthesizing module 'exp_3' [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:18]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1394.496 ; gain = 113.773 ; free physical = 186 ; free virtual = 6655
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+4 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Fri Jan 20 16:55:50 2023...
