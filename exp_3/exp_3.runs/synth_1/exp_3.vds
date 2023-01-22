@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Jan 20 16:55:25 2023
-# Process ID: 4754
+# Start of session at: Sun Jan 22 13:52:27 2023
+# Process ID: 8313
 # Current directory: /home/bruno/Documents/PED/exp_3/exp_3.runs/synth_1
 # Command line: vivado -log exp_3.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source exp_3.tcl
 # Log file: /home/bruno/Documents/PED/exp_3/exp_3.runs/synth_1/exp_3.vds
@@ -15,20 +15,351 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 4801 
+INFO: Helper process launched with PID 8334 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1348.746 ; gain = 68.023 ; free physical = 173 ; free virtual = 6672
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1348.523 ; gain = 0.000 ; free physical = 130 ; free virtual = 5211
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'exp_3' [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:18]
-INFO: [Synth 8-226] default block is never used [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:23]
-ERROR: [Synth 8-690] width mismatch in assignment; target has 5 bits, source has 4 bits [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:25]
-ERROR: [Synth 8-285] failed synthesizing module 'exp_3' [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:18]
+INFO: [Synth 8-638] synthesizing module 'exp_3' [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:19]
+	Parameter NUM_BITS bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'exp_3' (1#1) [/home/bruno/Documents/PED/exp_3/exp_3.srcs/sources_1/new/exp_3.vhd:19]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1394.496 ; gain = 113.773 ; free physical = 186 ; free virtual = 6655
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1379.047 ; gain = 30.523 ; free physical = 76 ; free virtual = 5088
 ---------------------------------------------------------------------------------
-RTL Elaboration failed
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1379.047 ; gain = 30.523 ; free physical = 115 ; free virtual = 5192
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1379.047 ; gain = 30.523 ; free physical = 114 ; free virtual = 5192
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc]
+WARNING: [Vivado 12-584] No ports matched 's(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 's(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 's(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 's(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'b(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'a(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(0)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(1)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(2)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'f(3)'. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/bruno/Documents/PED/exp_3/exp_3.srcs/constrs_1/imports/PED/Bassys3_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/exp_3_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/exp_3_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1639.938 ; gain = 0.000 ; free physical = 156 ; free virtual = 4986
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1639.938 ; gain = 0.000 ; free physical = 156 ; free virtual = 4986
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1639.938 ; gain = 0.000 ; free physical = 156 ; free virtual = 4986
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1639.938 ; gain = 0.000 ; free physical = 156 ; free virtual = 4986
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1639.938 ; gain = 291.414 ; free physical = 164 ; free virtual = 5009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1639.938 ; gain = 291.414 ; free physical = 164 ; free virtual = 5009
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1639.938 ; gain = 291.414 ; free physical = 164 ; free virtual = 5010
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 1639.938 ; gain = 291.414 ; free physical = 154 ; free virtual = 5001
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module exp_3 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      5 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:28 . Memory (MB): peak = 1639.938 ; gain = 291.414 ; free physical = 126 ; free virtual = 4980
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1669.938 ; gain = 321.414 ; free physical = 142 ; free virtual = 4885
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1669.938 ; gain = 321.414 ; free physical = 152 ; free virtual = 4895
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:39 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 144 ; free virtual = 4887
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT4 |     3|
+|2     |LUT5 |     2|
+|3     |LUT6 |     5|
+|4     |IBUF |    10|
+|5     |OBUF |     6|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    26|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.953 ; gain = 331.430 ; free physical = 146 ; free virtual = 4891
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1679.953 ; gain = 70.539 ; free physical = 166 ; free virtual = 4922
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 1679.961 ; gain = 331.430 ; free physical = 166 ; free virtual = 4922
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1684.953 ; gain = 0.000 ; free physical = 122 ; free virtual = 4895
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
 INFO: [Common 17-83] Releasing license: Synthesis
-4 Infos, 0 Warnings, 0 Critical Warnings and 3 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 20 16:55:50 2023...
+12 Infos, 28 Warnings, 28 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:42 . Memory (MB): peak = 1684.953 ; gain = 336.430 ; free physical = 153 ; free virtual = 4928
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1684.953 ; gain = 0.000 ; free physical = 153 ; free virtual = 4928
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/bruno/Documents/PED/exp_3/exp_3.runs/synth_1/exp_3.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file exp_3_utilization_synth.rpt -pb exp_3_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 22 13:53:23 2023...

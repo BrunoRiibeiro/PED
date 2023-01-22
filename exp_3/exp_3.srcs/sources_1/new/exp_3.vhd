@@ -9,6 +9,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD.ALL;
 
 entity exp_3 is
+    generic(NUM_Bits: integer := 5);
     Port ( A, B        : in  std_logic_vector(3 downto 0);
            S           : in  std_logic_vector(1 downto 0);
            F           : out std_logic_vector(3 downto 0);
@@ -16,33 +17,30 @@ entity exp_3 is
 end exp_3;
 
 architecture Behavioral of exp_3 is
+    signal sum_sig, sSub: signed(5 downto 0);
+    signal sF, oAnd, oOr: std_logic_vector (3 downto 0);
 begin
-    process(A, B, S)
-    variable temp : std_logic_vector(4 downto 0);
-    begin
-        case S is
-            when "00" =>
-                temp := std_logic_vector(signed(A) + signed(B));
-                F <= temp(3 downto 0);
-                over <= temp(4);
-                c_out <= temp(3);
-            when "01" =>
-                temp := std_logic_vector(signed(A) - signed(B));
-                F <= temp(3 downto 0);
-                over <= temp(4);
-                c_out <= temp(3);
-            when "10" =>
-                F <= A and B;
-                over <= '0';
-                c_out <= '0';
-            when "11" =>
-                F <= A or B;
-                over <= '0';
-                c_out <= '0';
-            when others =>
-                F <= (others => 'X');
-                over <= 'X';
-                c_out <= 'X';
-        end case;
-    end process;
+    --Realizando as operações
+    sum_sig<= signed(A(3)&A) + signed(b);
+    sSub <= signed(A(3)&A) - signed(b);
+    oAnd <= A and B;
+    oOr <= A or B;
+    
+    --Atribuindo a operação a saida
+    with S select
+       sF <=  std_logic_vector(sum_sig(3 downto 0)) when "00",
+              std_logic_vector(sSub(3 downto 0)) when "01",
+              oAnd when "10",
+              oOr when others;
+              
+    with S select
+        over <= (sum_sig(NUM_BITS)xor sum_sig(NUM_BITS-1)) when "00",
+                    (sSub(NUM_BITS)xor sSub(NUM_BITS-1)) when "01",
+                    'X' when others;
+    with S select
+        c_out <= sum_sig(NUM_BITS-1) when "00",
+                  sSub(NUM_Bits-1) when "01",
+                  'X' when others;
+     F <= sF;
+
 end Behavioral;

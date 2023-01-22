@@ -43,6 +43,8 @@ begin
         sA <= "1111"; sB <= "0001"; sS <= "01"; wait for 10 ns;
         sA <= "0101"; sB <= "0001"; sS <= "00"; wait for 10 ns;
         sA <= "0101"; sB <= "0001"; sS <= "01"; wait for 10 ns;
+        sA <= "1001"; sB <= "0100"; sS <= "00"; wait for 10 ns;
+        sA <= "1001"; sB <= "0100"; sS <= "01"; wait for 10 ns;
     end process;
 
 end Behavioral;
