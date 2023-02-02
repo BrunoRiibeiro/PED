@@ -1,4 +1,5 @@
-linguist-language=vhdl
+*.tcl linguist-language=vhdl
+*.tcl linguist-detectable=false
 *.html linguist-detectable=false
 *.js linguist-detectable=false
 *.c linguist-detectable=false
